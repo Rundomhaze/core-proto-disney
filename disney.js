@@ -1,17 +1,16 @@
-
 // task 1 - prototype
-Array.prototype.toString = function () {
-  let str = ''
-  for (let i = 0; i < this.length; i++) {
-    str += `🧜  ID: ${i} 👉  Cartoon: ${this[i]} 🧚\n`;
-  }
-  return str;
-}
+// Array.prototype.toString = function () {
+//   let str = ''
+//   for (let i = 0; i < this.length; i++) {
+//     str += `🧜  ID: ${i} 👉  Cartoon: ${this[i]} 🧚\n`;
+//   }
+//   return str;
+// }
 
-let a = ['Duck Stories', 'Mikey Mouse', 'Aladdin', 'Toy Story', 'Chip \'n\' Dale'];
-console.log(
-  a.toString()
-);
+// let a = ['Duck Stories', 'Mikey Mouse', 'Aladdin', 'Toy Story', 'Chip \'n\' Dale'];
+// console.log(
+//   a.toString()
+// );
 
 
 // task 2 - proto
