@@ -1,6 +1,6 @@
 /**
  * Человек.
- * @param {string} name 
+ * @param {string} name
  */
 function Person(name) {
   // Код тут.
@@ -8,4 +8,4 @@ function Person(name) {
 
 Person.prototype.watchMovie = function (movie) {
   // Код тут.
-}
+};
