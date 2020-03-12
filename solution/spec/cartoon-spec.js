@@ -6,14 +6,14 @@ describe('Cartoon', () => {
   });
 
   describe('when called', () => {
-    it('sets title, year, age restrictions #1', () => {
+    it('sets title, year, age restrictions (if a cartoon is FOR children)', () => {
       let cartoon = new Cartoon('Малыш и Карлсон', 1968);
       expect(cartoon.title).toEqual('Малыш и Карлсон');
       expect(cartoon.year).toEqual(1968);
       expect(cartoon.forChildren).toBeTruthy();
     });
 
-    it('sets title, year, age restrictions #2', () => {
+    it('sets title, year, age restrictions (if a cartoon is NOT FOR children)', () => {
       let cartoon = new Cartoon('Corpse Bride', 2005, false);
       expect(cartoon.title).toEqual('Corpse Bride');
       expect(cartoon.year).toEqual(2005);
@@ -30,7 +30,7 @@ describe('Disney Cartoon', () => {
     });
 
     it('extends Cartoon', () => {
-      expect(DisneyCartoon.prototype).toEqual(Object.create(Cartoon)); // props
+      expect(DisneyCartoon.prototype).toBeInstanceOf(Cartoon);
     });
 
     it('extends Cartoon but the constructor remains the same', () => {
@@ -94,7 +94,7 @@ describe('DreamWorks Cartoon', () => {
     });
 
     it('extends Cartoon', () => {
-      expect(DreamWorksCartoon.prototype).toEqual(Object.create(Cartoon)); // props
+      expect(DreamWorksCartoon.prototype).toBeInstanceOf(Cartoon);
     });
 
     it('extends Cartoon but the constructor remains the same', () => {

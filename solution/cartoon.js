@@ -4,11 +4,11 @@
  * @param {*} year 
  * @param {*} forChildren 
  */
-const Cartoon = function (title, year, forChildren=true) {
+const Cartoon = function (title, year, forChildren=true, beginning) {
   this.title = title;
   this.year = year;
-  this.forChildren = true;
-
+  this.forChildren = forChildren;
+  this.beginning = beginning;
 }
 
 Cartoon.prototype.getDescription = function () {
@@ -41,11 +41,11 @@ Cartoon.prototype.play = function () {
  * @param {*} title 
  * @param {*} year 
  */
-const DisneyCartoon = function (title, year) {
+const DisneyCartoon = function (title, year, forChildren, beginning) {
   Cartoon.apply(this, arguments); // Вызов родительского конструктора
   this.studio = 'Walt Disney';
   this.studioLogo = '🏰🌠';
-  this.beginning = 'Long, long ago in a faraway land...';
+  this.beginning = beginning || 'Long, long ago in a faraway land...';
 }
 
 //  Наследование.
@@ -59,12 +59,11 @@ DisneyCartoon.prototype.constructor = DisneyCartoon;
  * @param {*} title 
  * @param {*} year 
  */
-const DreamWorksCartoon = function (title, year) {
+const DreamWorksCartoon = function (title, year, forChildren, beginning) {
   Cartoon.apply(this, arguments); // Вызов родительского конструктора
-  this.forChildren = true;
   this.studio = 'DreamWorks';
   this.studioLogo = '🌙';
-  this.beginning = 'Long, long ago in a faraway land...';
+  this.beginning = beginning || 'Long, long ago in a faraway land...';
 }
 
 //  Наследование.
@@ -75,23 +74,23 @@ DreamWorksCartoon.prototype.constructor = DreamWorksCartoon;
 // -----------------------
 
 
-const theLittleMermaid = new DisneyCartoon('The Little Mermaid 🧜', 1989);
+// const theLittleMermaid = new DisneyCartoon('The Little Mermaid 🧜', 1989);
 
-// console.log(theLittleMermaid);
+// // console.log(theLittleMermaid);
 
-console.log(
-  theLittleMermaid.play()
-);
+// console.log(
+//   theLittleMermaid.play()
+// );
 
 
 
-const kungFuPanda = new DreamWorksCartoon(
-  'Kung Fu Panda 🐼', 
-  2008,
-  'Legend tells of a legendary warrior whose Kung Fu skills were the stuff of legend...'
-  );
+// const kungFuPanda = new DreamWorksCartoon(
+//   'Kung Fu Panda 🐼', 
+//   2008,
+//   'Legend tells of a legendary warrior whose Kung Fu skills were the stuff of legend...'
+//   );
 
-kungFuPanda.beginning = 'Legend tells of a legendary warrior whose Kung Fu skills were the stuff of legend...';
+// kungFuPanda.beginning = 'Legend tells of a legendary warrior whose Kung Fu skills were the stuff of legend...';
 
 // console.log(kungFuPanda);
 
