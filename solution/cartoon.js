@@ -69,32 +69,3 @@ const DreamWorksCartoon = function (title, year, forChildren, beginning) {
 //  Наследование.
 DreamWorksCartoon.prototype = Object.create(Cartoon.prototype); // new Cartoon();
 DreamWorksCartoon.prototype.constructor = DreamWorksCartoon;
-
-
-// -----------------------
-
-
-// const theLittleMermaid = new DisneyCartoon('The Little Mermaid 🧜', 1989);
-
-// // console.log(theLittleMermaid);
-
-// console.log(
-//   theLittleMermaid.play()
-// );
-
-
-
-// const kungFuPanda = new DreamWorksCartoon(
-//   'Kung Fu Panda 🐼', 
-//   2008,
-//   'Legend tells of a legendary warrior whose Kung Fu skills were the stuff of legend...'
-//   );
-
-// kungFuPanda.beginning = 'Legend tells of a legendary warrior whose Kung Fu skills were the stuff of legend...';
-
-// console.log(kungFuPanda);
-
-// console.log(
-//   kungFuPanda.play()
-// );
-

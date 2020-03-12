@@ -1,43 +1,46 @@
-// task 1 - prototype
-// Array.prototype.toString = function () {
-//   let str = ''
-//   for (let i = 0; i < this.length; i++) {
-//     str += `🧜  ID: ${i} 👉  Cartoon: ${this[i]} 🧚\n`;
-//   }
-//   return str;
-// }
-
-// let a = ['Duck Stories', 'Mikey Mouse', 'Aladdin', 'Toy Story', 'Chip \'n\' Dale'];
-// console.log(
-//   a.toString()
-// );
-
-
-// task 2 - proto
-
-const disneyCartoon = function (title, year) {
-  this.__proto__.studio = 'Disney';
-  this.__proto__.forChildren = true;
+/**
+ * Мультфильм.
+ * @param {string} title - Name of the cartoon
+ * @param {number} year - When it released (1990)
+ * @param {boolean} forChildren - true/false
+ * @param {string} beginning - Several words from the beginning of the cartoon
+ */
+const Cartoon = function (title, year, forChildren = true, beginning = 'Long, long ago...') {
   this.title = title;
   this.year = year;
-  console.log(this.__proto__);
+  this.forChildren = forChildren;
+  this.beginning = beginning;
 }
 
-disneyCartoon.prototype.welcome = function () {
-  console.log('Welcome to Disney studio!');
+Cartoon.prototype.getDescription = function () {
+  return Object.entries(this);
 }
 
-const duckStories = new disneyCartoon('duck stories', 1990)
+Cartoon.prototype.play = function () {
+  return [
+    this.studio,
+    this.title,
+    this.beginning,
+  ].join('\n');
+}
 
-duckStories.welcome();
 
+/**
+ * Мульт студии Walt Disney.
+ */
+const DisneyCartoon = function (title, year, forChildren, beginning) {
+  this.title = title;
+  this.year = year;
+  this.beginning = beginning;
+  this.studio = 'Walt Disney';
+}
 
-
-// console.log('obj\n', duckStories);
-// console.log('obj.__proto__\n', duckStories.__proto__);
-// console.log('obj.__proto__\n', duckStories.__proto__.__proto__);
-// console.log('obj.__proto__\n', duckStories.__proto__.__proto__.__proto__);
-// console.log('obj.__proto__\n', duckStories.__proto__);
-// console.log(duckStories.studio);
-
-// добавить мультик
+/**
+ * Мульт студии DreamWorks.
+ */
+const DreamWorksCartoon = function (title, year, forChildren, beginning) {
+  this.title = title;
+  this.year = year;
+  this.forChildren = forChildren;
+  this.studio = 'DreamWorks';
+}
