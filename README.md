@@ -13,11 +13,13 @@ function Cartoon(title, year, forChildren = true, beginning = 'Long, long ago...
   this.beginning = beginning;
 }
 ```
-У тебя есть одна сущность, с свойствами, которые повторяются в `Disney Cartoon`  и  `DreamWorksCartoon`
-Сделай доступныйми свойства и методы `Сartoon` 
+У тебя есть одна сущность, с свойствами, которые повторяются.
+Сделай доступныйми свойства и методы `Сartoon`  в `Disney Cartoon`  и  `DreamWorksCartoon` и убери лишнее.
 ### Release 1
+Давай разберемся с конструктором и наследованием. 
+Определись что должно быть в `prototype` и от кого должны наследоваться твои функции киностудии.
 
-
+> p.s. загляни в тесты
 
 ### Release 2
 
