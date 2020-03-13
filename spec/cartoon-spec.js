@@ -53,7 +53,7 @@ describe('Disney Cartoon', () => {
       expect(disneyCartoon.forChildren).toBeTruthy();
     });
 
-    it('has it`s own properties', () => {
+    it('has it`s own properties', () => { 
       expect(disneyCartoon.studio).toEqual('Walt Disney');
       expect(disneyCartoon.studioLogo).toEqual('🏰🌠');
       expect(disneyCartoon.beginning).toEqual('Long, long ago in a faraway land...'); // default beginning.
@@ -72,7 +72,7 @@ describe('Disney Cartoon', () => {
       );
     });
 
-    it('contains the studio and it`s logo', () => {
+    it('contains the studio and it`s logo', () => { 
       expect(disneyCartoon.play()).toContain(disneyCartoon.studio);
       expect(disneyCartoon.play()).toContain(disneyCartoon.studioLogo);
     });
