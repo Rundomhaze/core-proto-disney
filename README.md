@@ -1,6 +1,6 @@
 # Disney 🧚
 ### Proto and prototype and bind
-  ![screenshot](readme-assets/349186.jpeg).
+  ![screenshot](readme-assets/349186.jpg).
 
 ### Release 0
 
