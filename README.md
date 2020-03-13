@@ -14,7 +14,7 @@ function Cartoon(title, year, forChildren = true, beginning = 'Long, long ago...
 }
 ```
 У тебя есть одна сущность, с свойствами, которые повторяются в `Disney Cartoon`  и  `DreamWorksCartoon`
-
+Сделай доступныйми свойства и методы `Сartoon` 
 ### Release 1
 
 
