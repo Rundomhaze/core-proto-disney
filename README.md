@@ -23,9 +23,13 @@ function Cartoon(title, year, forChildren = true, beginning = 'Long, long ago...
 
 ### Release 2
 
-
+Мультики созданы для того чтобы их смотреть. В файле `person` есть сущность `Person` у которой может быть имя и список просмотренных фильмов,а также метод просмотра этого мультика.
 
 ### Release 3
+Если ты заглянешь в тесты `person-spec` то в последнем тестовом кейсе ты увидишь следующий код.
 
+```sh
+ let prettyString = 'The movies which Emma has watched:\n' + emma.watchedMovies;
+```
 
 
