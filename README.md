@@ -17,7 +17,7 @@ function Cartoon(title, year, forChildren = true, beginning = 'Long, long ago...
 }
 ```
 
-Сущность `Сartoon` является общей для `DisneyCartoon` и `DreamWorksCartoon`. Тебе надо сделать наследование. Определись что должно быть в `prototype` и каким должен быть `constuctor`.
+Функция-конструктор `Сartoon` является общей для `DisneyCartoon` и `DreamWorksCartoon`. Тебе надо сделать наследование. Определись что должно быть в `prototype` и каким должен быть `constuctor`.
 
 > p.s. загляни в тесты
 
@@ -43,13 +43,13 @@ function Cartoon(title, year, forChildren = true, beginning = 'Long, long ago...
   this.studio = 'DreamWorks';
 ```
 
-Получается, что мы повторяем сами себя и дублируем свойства родительской функции `Cartoon`. Давай организуем код так, чтобы из дочерних функций были доступны родительские.
+Получается, что мы повторяем сами себя и дублируем свойства родительской функции-конструктора `Cartoon`. Давай организуем код так, чтобы из дочерних функций были доступны родительские.
 
 ### Release 2
 
 Мультики созданы для того чтобы их смотреть.
 
-В файле `person` есть сущность `Person`.
+В файле `person` есть функция-конструктор `Person`.
 У неё должно быть имя( свойство `name` ) и список просмотренных фильмов( свойство `watchedMovies` ). А также метод просмотра мультика `watchMovie`. 
 
 `watchMovie` должен запускать метод `play` у мультика и добавлять новые мультики в список просмотренных. Не забудь сделать проверку, вдруг наш персонаж уже смотрел этот мультик. 
@@ -63,6 +63,6 @@ function Cartoon(title, year, forChildren = true, beginning = 'Long, long ago...
 ```
 
 Как ты думаешь что тут происходит ?
-Для начала поэкспериментируй с конкатенацией строки и массива. Со строкой все понятно, а что с [массивом](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/toString) ?
+Для начала поэкспериментируй с [конкатенацией](https://ru.wikipedia.org/wiki/%D0%9A%D0%BE%D0%BD%D0%BA%D0%B0%D1%82%D0%B5%D0%BD%D0%B0%D1%86%D0%B8%D1%8F) строки и массива. Со строкой все понятно, а что с [массивом](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/toString) ?
 
 В данном примере у массива вызывается метод `toString`, который нам и надо переопределить. Но будь внимателен тебе нужно изменить метод конкретного массива, а не глобального объекта Array.
