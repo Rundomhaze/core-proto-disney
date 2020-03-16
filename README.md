@@ -40,3 +40,5 @@ function Cartoon(title, year, forChildren = true, beginning = 'Long, long ago...
 Как ты думаешь что тут происходит ? 
 Для начала поэкспериментируй с конкатенацией строки и массива. Со строкой все понятно, а что с [массивом](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/toString) ? 
 
+В данном примере у массива вызывается метод `toString`, который нам и надо переопределить. Но будь внимателен тебе нужно изменить метод конкретного массива, а не глобального объекта Array.
+
