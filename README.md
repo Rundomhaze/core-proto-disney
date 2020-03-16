@@ -38,5 +38,5 @@ function Cartoon(title, year, forChildren = true, beginning = 'Long, long ago...
  let prettyString = 'The movies which Emma has watched:\n' + emma.watchedMovies;
 ```
 Как ты думаешь что тут происходит ? 
-Для начала поэкспериментируй с конкатенацией строки и массива. Со строкой все понятно, а что с (массивом)[https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/toString] ? 
+Для начала поэкспериментируй с конкатенацией строки и массива. Со строкой все понятно, а что с [массивом](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/toString) ? 
 
