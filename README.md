@@ -27,7 +27,9 @@ function Cartoon(title, year, forChildren = true, beginning = 'Long, long ago...
 
 ### Release 2
 
-Мультики созданы для того чтобы их смотреть. В файле `person` есть сущность `Person` у которой может быть имя( свойство `name` ) и список просмотренных фильмов( свойство `watchedMovies` ) ,а также метод просмотра этого мультика `watchMovie` .
+Мультики созданы для того чтобы их смотреть.
+
+В файле `person` есть сущность `Person` у которой может быть имя( свойство `name` ) и список просмотренных фильмов( свойство `watchedMovies` ). А также метод просмотра мультика `watchMovie`, не забудь добавлять новые мультики в список уже просмотренных.
 
 ### Release 3
 Если ты заглянешь в тесты `person-spec` то в последнем тестовом кейсе ты увидишь следующий код.
@@ -35,5 +37,6 @@ function Cartoon(title, year, forChildren = true, beginning = 'Long, long ago...
 ```sh
  let prettyString = 'The movies which Emma has watched:\n' + emma.watchedMovies;
 ```
-
+Как ты думаешь что тут происходит ? 
+Для начала поэкспериментируй с конкатенацией строки и массива. Со строкой все понятно, а что с (массивом)[https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/toString] ? 
 
