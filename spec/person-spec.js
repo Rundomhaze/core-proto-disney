@@ -59,7 +59,6 @@ describe('Person', () => {
         
         expect(prettyString).toContain(`${index + 1}`);
         expect(prettyString).toContain(`${movie.title}`);
-        expect(prettyString).toContain('🧚');
       });
     });
   });
