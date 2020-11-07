@@ -9,3 +9,5 @@ function Person(name) {
 Person.prototype.watchMovie = function (movie) {
   // Код тут.
 };
+
+module.exports = { Person };

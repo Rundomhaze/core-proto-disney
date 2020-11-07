@@ -24,7 +24,6 @@ Cartoon.prototype.play = function () {
   ].join('\n');
 };
 
-
 /**
  * Мульт студии Walt Disney.
  */
@@ -44,3 +43,5 @@ function DreamWorksCartoon(title, year, forChildren, beginning) {
   this.forChildren = forChildren;
   this.studio = 'DreamWorks';
 }
+
+module.exports = { Cartoon, DisneyCartoon, DreamWorksCartoon };
