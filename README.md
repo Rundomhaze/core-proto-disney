@@ -6,7 +6,7 @@
 
 ### Release 0
 
-В папке `src` у тебя есть два файла `cartoon` и `person`. В первую очередь ознакомься с этими файлами и изучи содержимое.
+In folder `src` there are two files: `cartoon` and `person`. First of all, take a look at these files and study the contents.
 
 ```js
 function Cartoon(title, year, forChildren = true, beginning = 'Long, long ago...') {
@@ -17,15 +17,15 @@ function Cartoon(title, year, forChildren = true, beginning = 'Long, long ago...
 }
 ```
 
-Функция-конструктор `Сartoon` является общей для `DisneyCartoon` и `DreamWorksCartoon`. Тебе надо сделать наследование. Определись что должно быть в `prototype` и каким должен быть `constuctor`.
+Constructor function `Сartoon` is common both for `DisneyCartoon` and `DreamWorksCartoon`. You are supposed to implement inheritance. Decide what should be in `prototype` and how should `constuctor` look like.
 
-> p.s. загляни в тесты
+> p.s. take a look at tests.
 
 ### Release 1
 
-А что со свойствами? В прошлом релизе мы сделали наследование, но свойства так и остались не тронутыми.
+And how about properties? We implemented inheritance in the previous release, but the properties still remained untouched.
 
-Сейчас у `DisneyCartoon` есть свойства:
+Now `DisneyCartoon` has properties:
 
 ```js
   this.title = title;
@@ -34,7 +34,7 @@ function Cartoon(title, year, forChildren = true, beginning = 'Long, long ago...
   this.studio = 'Walt Disney';
 ```
 
-А у `DreamWorksCartoon` :
+As for `DreamWorksCartoon` :
 
 ```js
   this.title = title;
@@ -43,32 +43,32 @@ function Cartoon(title, year, forChildren = true, beginning = 'Long, long ago...
   this.studio = 'DreamWorks';
 ```
 
-Получается, что мы повторяем сами себя и дублируем свойства родительской функции-конструктора `Cartoon`. Давай организуем код так, чтобы код не дублировался, а из дочерних функций были доступны родительские.
+It turns out that we repeat ourselves, duplicating the properties of the constructor function `Cartoon`, which is parent. Let's organize the code so that it won't be duplicated and the parent functions will be accessible from the child functions.
 
-> Подсказка: Ознакомьтесь с методами call, apply, bind. Они могут помочь избавиться от дублирования свойств.
+> Hint: Familiarize yourself with methods call, apply, bind. They can help to get rid of duplicated properties.
 
 ### Release 2
 
-Мультики созданы для того чтобы их смотреть.
+The cartoons are meant to be watched.
 
-В файле `person` есть функция-конструктор `Person`.
-У неё должно быть имя( свойство `name` ) и список просмотренных фильмов( свойство `watchedMovies` ). А также метод просмотра фильма `watchMovie`. 
+The `person` file has a constructor function `Person`.
+It must have a name ( property `name` ) and a list of watched movies ( property `watchedMovies` ). Also there should be a movie watching method `watchMovie`. 
 
-`watchMovie` должен запускать метод `play` у мультика и добавлять новые мультики в список просмотренных. Не забудь сделать проверку, вдруг наш персонаж уже смотрел этот мультик. 
+`watchMovie` should run catroon's `play` method and add new cartoons to the watch-list. Don't forget to check if our character has already seen the cartoon. 
 
 ### Release 3
 
-Если ты заглянешь в тесты `person-spec` то в последнем тестовом кейсе ты увидишь следующий код.
+If you look into the `person-spec` tests, in the last test case you will see the following code:
 
 ```js
  let prettyString = 'The movies which Emma has watched:\n' + emma.watchedMovies;
 ```
 
-Как ты думаешь что тут происходит ?
-Для начала поэкспериментируй с [конкатенацией][конкатенация] строки и массива. Со строкой все понятно, а что с [массивом][arr.toString]?
+What do you think is going on here ?
+First, experiment with [concatenation][конкатенация] of a string and array. It's clear about the string, but how about the [array][arr.toString]?
 
-В данном примере у массива вызывается метод `toString`, который нам и надо переопределить. Но будь внимателен тебе нужно изменить метод конкретного массива, а не глобального объекта Array.
+In this example, the we call method of the array `toString`, which is what we need to override. But be careful, you need to override the method of the specific array, not the global Array object.
 
 
-[конкатенация]: https://ru.wikipedia.org/wiki/%D0%9A%D0%BE%D0%BD%D0%BA%D0%B0%D1%82%D0%B5%D0%BD%D0%B0%D1%86%D0%B8%D1%8F
-[arr.toString]: https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/toString
+[конкатенация]: https://en.wikipedia.org/wiki/Concatenation
+[arr.toString]: https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/toString
