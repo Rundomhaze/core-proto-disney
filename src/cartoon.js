@@ -1,5 +1,5 @@
 /**
- * Мультфильм.
+ * Cartoon
  * @param {string} title - Name of the cartoon
  * @param {number} year - When it released (1990)
  * @param {boolean} forChildren - true/false
@@ -25,7 +25,7 @@ Cartoon.prototype.play = function () {
 };
 
 /**
- * Мульт студии Walt Disney.
+ * Walt Disney Cartoon
  */
 function DisneyCartoon(title, year, forChildren, beginning) {
   this.title = title;
@@ -35,7 +35,7 @@ function DisneyCartoon(title, year, forChildren, beginning) {
 }
 
 /**
- * Мульт студии DreamWorks.
+ * DreamWorks Cartoon.
  */
 function DreamWorksCartoon(title, year, forChildren, beginning) {
   this.title = title;
