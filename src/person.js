@@ -1,13 +1,13 @@
 /**
- * Человек.
+ * Person
  * @param {string} name
  */
 function Person(name) {
-  // Код тут.
+  // Here is your code
 }
 
 Person.prototype.watchMovie = function (movie) {
-  // Код тут.
+  // Here is your code
 };
 
 module.exports = { Person };
