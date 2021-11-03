@@ -53,13 +53,9 @@ describe('Person', () => {
   });
 
   describe('person.watchedMovies.toString()', () => {
-    test('returns pretty string of the watched movies', () => {
-      const prettyString = `The movies which Emma has watched:\n${emma.watchedMovies}`;
-      console.log(emma.watchedMovies);
-      console.log(emma.watchedMovies.toString());
+    test('returns pretty string of the watched movies: 1 Rapunzel', () => {
+      const prettyString = emma.watchedMovies.toString();
       emma.watchedMovies.forEach((movie, index) => {
-        console.log(movie);
-
         expect(prettyString).toContain(`${index + 1}`);
         expect(prettyString).toContain(`${movie.title}`);
       });
