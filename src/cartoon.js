@@ -21,27 +21,30 @@ Cartoon.prototype.play = function () {
     this.studio,
     this.title,
     this.beginning,
+    this.studioLogo
   ].join('\n');
 };
 
 /**
  * Мульт студии Walt Disney.
  */
-function DisneyCartoon(title, year, forChildren, beginning) {
-  this.title = title;
-  this.year = year;
-  this.beginning = beginning;
+function DisneyCartoon(title, year, forChildren, beginning = 'Long, long ago in a faraway land...') {
+  Cartoon.call(this, title, year, forChildren, beginning)
   this.studio = 'Walt Disney';
+  this.studioLogo = '🏰🌠'
 }
+
 
 /**
  * Мульт студии DreamWorks.
  */
 function DreamWorksCartoon(title, year, forChildren, beginning) {
-  this.title = title;
-  this.year = year;
-  this.forChildren = forChildren;
+  Cartoon.call(this, title, year, forChildren, beginning)
   this.studio = 'DreamWorks';
+  this.studioLogo = '🌙'
 }
+
+Object.setPrototypeOf(DisneyCartoon.prototype, Cartoon.prototype);
+Object.setPrototypeOf(DreamWorksCartoon.prototype, Cartoon.prototype);
 
 module.exports = { Cartoon, DisneyCartoon, DreamWorksCartoon };
