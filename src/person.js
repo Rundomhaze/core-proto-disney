@@ -3,12 +3,6 @@
  * @param {string} name
  */
 
-const {
-  Cartoon,
-  DisneyCartoon,
-  DreamWorksCartoon }
-  = require('../src/cartoon')
-
 function Person(name, watchedMovies) {
   this.name = name;
   this.watchedMovies = watchedMovies;
